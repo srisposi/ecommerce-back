@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const usuarioSchema = mongoose.Schema({
+const SchemaUser = mongoose.Schema({
   lastName: { type: String },
   firstName: { type: String },
   email: { type: String, unique: true, lowercase: true },
@@ -9,4 +9,4 @@ const usuarioSchema = mongoose.Schema({
   lastLogin: Date,
 });
 
-module.exports = mongoose.model('Usuario', usuarioSchema);
+module.exports = mongoose.model('User', SchemaUser);

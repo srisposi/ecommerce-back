@@ -11,4 +11,4 @@ let mongo_db = {
   mongo_atlas: process.env.MONGO_ATLAS,
 };
 
-module.exports = { config };
+module.exports = { config, mongo_db };
