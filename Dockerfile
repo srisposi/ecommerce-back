@@ -4,6 +4,5 @@ WORKDIR /app
 RUN echo $PORT
 COPY . ./
 RUN rm .env 
-RUN mv .env
 RUN npm ci --silent
 CMD node index.js
