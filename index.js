@@ -1,10 +1,9 @@
 const express = require("express");
-const config = require("./src/config");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
 const routerUser = require("./src/controllers/UserController");
-const port = 8007;
+const port = process.env.PORT || 8007;
 
 mongoose
   .connect(
@@ -23,7 +22,6 @@ mongoose
 
     app.use("/api/user", routerUser);
 
-    console.log(port);
     app.listen(port, () => {
       // eslint-disable-next-line no-console
       console.log(`Estamos escuchando en está url: ${port}`);
